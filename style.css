@@ -1,0 +1,49 @@
+html, body {
+    margin: 0;
+    height: 100%;
+	background-color: rgb(46, 5, 67);
+}
+
+h1 {
+    color: purple
+}
+line {
+    stroke: red;
+}
+
+g.group0 path {
+    stroke: red;
+    fill: none
+}
+
+g.group1 path {
+    stroke: orange;
+    fill: none
+}
+g.group2 path {
+    stroke: yellow;
+    fill: none
+}
+g.group3 path {
+    stroke: green;
+    fill: none
+}
+g.group4 path {
+    stroke: blue;
+    fill: none
+}
+g.group5 path {
+    stroke: purple;
+    fill: none
+}
+g.tick line {
+    stroke: blue;
+}
+g.tick text {
+    fill: purple;
+    font-size: 12px
+}
+g.hidden line,
+g.hidden path {
+    display: none
+}
