@@ -27,10 +27,10 @@ svg.selectAll('rect')
         .attr('x', function(d, i) { return 60 * i })
         .attr('y', function(d, i) { return 300 - (d * 15) })
 
-svg.append('g')
-    .attr('class', 'x axis hidden')
-    .attr('transform', 'translate(0,300)')       
-    .call(xAxis)
+// svg.append('g')
+//     .attr('class', 'x axis hidden')
+//     .attr('transform', 'translate(0,300)')       
+//     .call(xAxis)
 
 let newX = 300;
 svg.selectAll('circle.first')
@@ -53,7 +53,7 @@ svg.selectAll('ellipse')
         .attr('rx',function(d, i) { return d * 3 })
         .attr('ry', '30')
 
-let newX3 = 900;
+        let newX3 = 900;
 svg.selectAll('line')
     .data(dataArray)
     .enter().append('line')
@@ -65,6 +65,13 @@ svg.selectAll('line')
         .attr('y1', function(d, i) { return 80 + (i * 20) })
         .attr('x2', function(d ,i) { return newX3 + (d * 15) })
         .attr('y2', function(d, i) { return 80 + (i * 20) })
+        
+// something about putting these before the lines messes up the lines 
+svg.append('g')
+    .attr('class', 'x axis hidden')
+    .attr('transform', 'translate(0,300)')       
+    .call(xAxis)
+
 
 const textArray = ['start', 'mid', 'end']
 svg.append('text').selectAll('tspan')
